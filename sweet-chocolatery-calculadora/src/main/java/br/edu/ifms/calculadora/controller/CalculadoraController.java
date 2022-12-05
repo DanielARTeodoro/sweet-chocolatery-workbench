@@ -15,6 +15,7 @@ public class CalculadoraController {
     @Autowired
     private CalculadoraService service;
 
+    /// GET Método
     @GetMapping(value = "/{num1}/{num2}")
     public Integer calculatorPathParam(@PathVariable String num1, @PathVariable String num2) {
         if (num1.matches("[0-9]+") && num2.matches("[0-9]+")) {
@@ -25,6 +26,7 @@ public class CalculadoraController {
         return null;
     }
 
+    ///POST Método
     @PostMapping
     @ResponseStatus(HttpStatus.ACCEPTED)
     public Calculadora calculatorPost(@RequestBody Calculadora calculadoraing) {
