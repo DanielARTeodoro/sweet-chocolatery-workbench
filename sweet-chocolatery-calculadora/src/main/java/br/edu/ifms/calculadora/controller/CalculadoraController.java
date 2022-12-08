@@ -15,7 +15,8 @@ public class CalculadoraController {
     @Autowired
     private CalculadoraService service;
 
-    /// GET Método
+    /// Método GET
+
     @GetMapping(value = "/{num1}/{num2}")
     public Integer calculatorPathParam(@PathVariable String num1, @PathVariable String num2) {
         if (num1.matches("[0-9]+") && num2.matches("[0-9]+")) {
@@ -26,12 +27,13 @@ public class CalculadoraController {
         return null;
     }
 
-    ///POST Método
+    /// Método POST
+
     @PostMapping
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public Calculadora calculatorPost(@RequestBody Calculadora calculadoraing) {
+    public Integer calculatorPost(@RequestBody Calculadora calculadoraing) {
         log.info("Soma da Calculadora só pode ter números", HttpStatus.ALREADY_REPORTED);
-        return service.create(calculadoraing);
-    }
+        return service.soma(calculadoraing);
 
+    }
 }
