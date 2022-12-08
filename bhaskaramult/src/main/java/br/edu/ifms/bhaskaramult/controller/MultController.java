@@ -30,11 +30,12 @@ public class MultController {
     /// Método POST
     @PostMapping
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public Mult multPost(@RequestBody Mult multing) {
+    public Integer multPost(@RequestBody Mult multing) {
         log.info("Multiplicação da Conta só pode ter números - Erro: 502", HttpStatus.BAD_GATEWAY.toString());
         log.info("Multiplicação da Conta só pode ter números - Erro: 400", HttpStatus.BAD_REQUEST.toString());
         log.info("Multiplicação da Conta não aceitar tal requisição - Erro: 510", HttpStatus.NOT_EXTENDED.toString());
-        return service.create(multing);
+        return service.multiplicar(multing);
+
     }
 
 }
