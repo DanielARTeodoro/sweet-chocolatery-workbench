@@ -1,28 +1,20 @@
 package br.edu.ifms.workbenchapp.model;
 
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
 public class OlaMundo {
-    private String saudacao;
-    private Double soma;
+    private Integer x;
+    private Integer y;
 
-    public OlaMundo(String nome) {
-        this.saudacao = "Olá " + nome + "!";
+    public Mult(Integer x, Integer y) {
+        this.x = x;
+        this.y = y;
     }
-
-    public String getSaudacao() {
-        return saudacao;
-    }
-
-    public Double getSoma() {
-        return soma;
-    }
-
-    public void depositar(Double valor){
-        soma += valor;
-    }
-
-    public void verificaSoma(){
-        System.out.println("Valor da Soma: "+getSoma());
-    }
-
 
 }
