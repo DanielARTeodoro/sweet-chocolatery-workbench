@@ -5,8 +5,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CalculadoraService {
-    public Calculadora create(Calculadora calculadoraing) {
-        int s = calculadoraing.getNum1() + calculadoraing.getNum2();
-        return calculadoraing;
+    public Integer soma(Calculadora calculadoraing) {
+        return calculadoraing.getNum1() + calculadoraing.getNum2();
     }
 }
