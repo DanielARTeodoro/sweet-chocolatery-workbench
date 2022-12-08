@@ -1,1 +1,2 @@
 Trabalho do Prof. Vini = Tratamento de Erros e Exceções;
+Nova versão: Multiplicação - Adaga de Cristal Apple Pie (0.1.0)
