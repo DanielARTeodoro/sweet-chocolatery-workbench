@@ -7,16 +7,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/sum")
+@RequestMapping("/mult")
 public class OlaMundoController {
 
-    @GetMapping(value = "/{num1}/{num2}")
-    public Integer getSum(@PathVariable String num1, @PathVariable String num2){
-         if(num1.matches("[0-9]+") && num2.matches("[0-9]+")){
-             return Integer.parseInt(num1) + Integer.parseInt(num2);
+    /// Método GET
+    @GetMapping(value = "/{x}/{y}")
+    public Integer getMultPathParms(@PathVariable String x, @PathVariable String y){
+         if(x.matches("[0-9]+") && y.matches("[0-9]+")){
+             return Integer.parseInt(x) * Integer.parseInt(y);
          } else {
-             throw new NotNumericException("Não é permitido letras na soma!");
+             throw new NotNumericException("Só é permitido Números na Conta!");
          }
     }
-    //verificaSoma
 }
