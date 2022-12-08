@@ -1,1 +1,3 @@
-Sweet Chocolatery - Calculadora de Soma - Repositorio - Calculador de Soma em java Spring Boot.
+Sweet Chocolatery - Calculadora de Soma - Repositorio - Calculador de Soma em java Spring Boot. 
+Nova verção do programa: 
+Soma - Mega Explosão Narval Ice Cream Sandwich (4.0).
