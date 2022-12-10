@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class MultService {
-    public Integer multiplicar(Mult multing) {
+    public Double multiplicar(Mult multing) {
         try {
             return multing.getX() * multing.getY();
         } catch (Exception exception) {
