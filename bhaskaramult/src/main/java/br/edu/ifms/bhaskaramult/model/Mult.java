@@ -8,10 +8,10 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class Mult {
-    private Integer x;
-    private Integer y;
+    private Double x;
+    private Double y;
 
-    public Mult(Integer x, Integer y) {
+    public Mult(Double x, Double y) {
         this.x = x;
         this.y = y;
     }
